@@ -1,0 +1,171 @@
+{
+  "version": "39.0.0",
+  "artifacts": {
+    "CdkProject8875518Stack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CdkProject8875518Stack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CdkProject8875518Stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CdkProject8875518Stack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/70f0da23db0c19e5b1b5fe9c038f3e02022c5bdfef4aa3132240d30379a6bd95.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CdkProject8875518Stack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CdkProject8875518Stack.assets"
+      ],
+      "metadata": {
+        "/CdkProject8875518Stack/S3Bucket8875518": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "versioned": true,
+              "removalPolicy": "destroy"
+            }
+          }
+        ],
+        "/CdkProject8875518Stack/S3Bucket8875518/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3Bucket887551849C417C9"
+          }
+        ],
+        "/CdkProject8875518Stack/Lambda8875518": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "runtime": "*",
+              "handler": "*",
+              "code": "*",
+              "environment": "*"
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addEnvironment": [
+                "*",
+                "*"
+              ]
+            }
+          }
+        ],
+        "/CdkProject8875518Stack/Lambda8875518/ServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "assumedBy": {
+                "principalAccount": "*",
+                "assumeRoleAction": "*"
+              },
+              "managedPolicies": [
+                {
+                  "managedPolicyArn": "*"
+                }
+              ]
+            }
+          }
+        ],
+        "/CdkProject8875518Stack/Lambda8875518/ServiceRole/ImportServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/CdkProject8875518Stack/Lambda8875518/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Lambda8875518ServiceRole21ED5444"
+          }
+        ],
+        "/CdkProject8875518Stack/Lambda8875518/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Lambda887551817EFD43B"
+          }
+        ],
+        "/CdkProject8875518Stack/DynamoDB8875518": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "partitionKey": {
+                "name": "*",
+                "type": "S"
+              },
+              "tableName": "*",
+              "removalPolicy": "destroy"
+            }
+          },
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "DynamoDB887551843F8E395"
+            }
+          }
+        ],
+        "/CdkProject8875518Stack/DynamoDB8875518/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDB887551843F8E395"
+          }
+        ],
+        "/CdkProject8875518Stack/DynamoDB8875518/ScalingRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/CdkProject8875518Stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CdkProject8875518Stack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/CdkProject8875518Stack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CdkProject8875518Stack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CdkProject8875518Stack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
